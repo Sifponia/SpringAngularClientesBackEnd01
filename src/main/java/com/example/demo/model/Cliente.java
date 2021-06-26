@@ -21,7 +21,6 @@ public class Cliente implements Serializable {
     private Integer id;
 
 
-    @Size(min = 2, max = 20, message = "Ingrese un nombre válido")
     @Column(name = "nombre")
     private String nombre;
 
@@ -34,7 +33,8 @@ public class Cliente implements Serializable {
     @Column(name = "create_at")
     private String createAt;
 
-    @Column(name = "email", nullable = false, unique = true)
+    @Column(name = "email")
+    // unique = true
     private String email;
 
     //Insertar fecha de creacion
